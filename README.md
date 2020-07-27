@@ -5,6 +5,8 @@
 - [mapper-spring-boot-starter](https://github.com/abel533/mapper-boot-starter)
 - [pagehelper-spring-boot-starter](https://github.com/pagehelper/pagehelper-spring-boot)
 
+生成实体类命令：mvn mybatis-generator:generate
+
 ## 新书《MyBatis 从入门到精通》
 
 ![MyBatis 从入门到精通](https://github.com/mybatis-book/book/raw/master/book.png)
@@ -68,7 +70,7 @@ mybatis.mapper-locations=classpath:mapper/*.xml
 
 #mapper
 #mappers 多个接口时逗号隔开
-mapper.mappers=tk.mybatis.springboot.util.MyMapper
+mapper.mappers=MyMapper
 mapper.not-empty=false
 mapper.identity=MYSQL
 
@@ -90,7 +92,7 @@ mybatis:
 
 mapper:
     mappers:
-        - tk.mybatis.springboot.util.MyMapper
+        - MyMapper
     not-empty: false
     identity: MYSQL
 

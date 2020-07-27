@@ -1,6 +1,6 @@
 server:
-    port: 9090
-    context-path: #/liuzh/
+    port: 8080
+    # context-path: #/liuzh/
 
 logging:
     level:
@@ -31,7 +31,7 @@ mybatis:
 
 mapper:
     mappers:
-        - tk.mybatis.springboot.util.MyMapper
+        - com.lzq.util.MyMapper
     not-empty: false
     identity: MYSQL
 

@@ -11,7 +11,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="tk.mybatis.springboot.util.MyMapper"/>
+            <property name="mappers" value="com.lzq.util.MyMapper"/>
         </plugin>
 
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
@@ -20,13 +20,13 @@
                         password="${spring.datasource.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="tk.mybatis.springboot.model" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.lzq.model" targetProject="src/main/java"/>
 
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
 
-        <javaClientGenerator targetPackage="tk.mybatis.springboot.mapper" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.lzq.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
-
+        <!-- 生成实体类命令：mvn mybatis-generator:generate -->
         <table tableName="country">
             <!--mysql 配置-->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
